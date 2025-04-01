@@ -1,0 +1,33 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main{
+	
+	public static void main(String[] args) {
+		
+		int random, palpite, tentativas;
+		Scanner teclado = new Scanner(System.in);
+		Random gerador = new Random();
+		random = gerador.nextInt(100) + 1;
+		tentativas = 1;
+		
+		System.out.print("Número entre 1 a 100: ");
+		
+		palpite = teclado.nextInt();
+		for (palpite != random) {
+			
+			if (guess > random ) {
+				System.out.print("Menor");
+				tentativas += 1;
+			} else {
+				System.out.print("Mais");
+				tentativas += 1;
+			}
+			
+		}
+		
+	}
+	
+	System.out.print(random + "é a resposta," + tentativas + "tentativas");
+	
+}
