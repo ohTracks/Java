@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Galo{
+    public static void main(String[] args) {
+		Scanner numero = new Scanner(System.in);
+        
+        System.out.print("Digite sua altura em M: ");
+        float altura = numero.nextFloat();
+        System.out.print("Digite sua massa em Kg: ");
+        float massa = numero.nextFloat();
+
+        System.out.print(altura + " " + massa);
+
+
+
+	}
+	
+}
