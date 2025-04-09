@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class Gabriel{
+public class Main{
 	
 	public static void main(String[] args) {
 		
@@ -10,8 +10,11 @@ public class Gabriel{
 		Random gerador = new Random();
 		random = gerador.nextInt(100) + 1;
 		tentativas = 1;
+		String con = null;
 		
-		System.out.print("Número entre 1 a 100: ");
+		do {
+		    
+		    System.out.print("Número entre 1 a 100: ");
 		
 		palpite = teclado.nextInt();
 		while (palpite != random) {
@@ -24,11 +27,17 @@ public class Gabriel{
 			}
             System.out.print("Número entre 1 a 100: ");
 			palpite = teclado.nextInt();
-			
 		}
 		
-        System.out.print(random + " é a resposta, " + tentativas + " tentativas");
+        System.out.println(random + " é a resposta, " + tentativas + " tentativas");
+        tentativas = 1;
+        System.out.print("Tentar de novo? [s] [n] ");
+        teclado.nextLine();
+        con = teclado.nextLine();
 
+		} 
+		while (!con.equals("n"));
+        
 	}
 	
 }
