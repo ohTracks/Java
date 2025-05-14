@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Main{
+
+    public static void main(String[]args ) {
+
+        String nome = null;
+
+        System.out.println("Hello World!");
+        Scanner in = new Scanner(System.in);
+        
+        System.out.println("Qual é seu nome: ");
+        nome = in.nextLine();
+
+        System.out.println("Hello " + nome);
+
+        int n1,n2,n3, media;
+        double num1,num2,resul;
+        String sinal;
+
+        System.out.println("Calculadora");
+    
+        System.out.println("Entre com o primeiro numero: ");
+        num1 = in.nextDouble();
+        System.out.println("Entre com o segundo numero: ");
+        num2 = in.nextDouble();
+        System.out.println("Soma (s) Menos (m) Vezes (v) Dividir (d): ");
+        sinal = in.next();
+
+        if(sinal.equals ("s"))
+        {
+            resul = num1 + num2;
+            System.out.println("Resultado final "+resul);
+        }
+        else if (sinal.equals ("m"))
+        {
+            resul = num1 - num2;
+            System.out.println("Resultado final "+resul);
+        }
+        else if (sinal.equals ("v"))
+        {
+            resul = num1 * num2;
+            System.out.println("Resultado final "+resul);
+        }
+        else if (sinal.equals("d"))
+        {
+            resul = num1 / num2;
+            System.out.println("Resultado final "+resul);
+        }
+
+        System.out.println("Entre com o primeiro numero: ");
+        n1 = in.nextInt();
+        System.out.println("Entre com o segundo numero: ");
+        n2 = in.nextInt();
+        System.out.println("Entre com o terceiro numero: ");
+        n3 = in.nextInt();
+
+        
