@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class MyClass {
+  public static void main(String args[]) {
+      Scanner in = new Scanner(System.in);
+    String mov;
+    int psx, psy, spd;
+    
+    psx = 0;
+    psy = 0;
+    spd = 1;
+    
+    System.out.println("Movimento: ")
+    mov = in.next();
+    
+    if 
+    
+    
+    
+    
+
+  }
+}
