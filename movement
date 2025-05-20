@@ -1,23 +1,43 @@
 import java.util.Scanner;
 
-public class MyClass {
-  public static void main(String args[]) {
-      Scanner in = new Scanner(System.in);
-    String mov;
-    int psx, psy, spd;
-    
-    psx = 0;
-    psy = 0;
-    spd = 1;
-    
-    System.out.println("Movimento: ")
-    mov = in.next();
-    
-    if 
-    
-    
-    
-    
+public class Main {
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+        int psx = 0, psy = 0, spd = 1;
+        String mov;
 
-  }
+        System.out.println("Use W, A, S, D to move. Type Q to quit.");
+
+        while (true) {
+            System.out.print("Movimento: ");
+            mov = keyboard.next().toUpperCase();
+
+            if (mov.equals("Q")) {
+                System.out.println("Encerrando o programa.");
+                break;
+            }
+
+            switch (mov) {
+                case "D":
+                    psx += spd;
+                    break;
+                case "A":
+                    psx -= spd;
+                    break;
+                case "W":
+                    psy += spd;
+                    break;
+                case "S":
+                    psy -= spd;
+                    break;
+                default:
+                    System.out.println("Comando inválido. Use W, A, S, D ou Q para sair.");
+                    continue;
+            }
+
+            System.out.println("Nova posição: (psx:" + psx + ", psy: " + psy + ")");
+        }
+
+        keyboard.close();
+    }
 }
